@@ -1,0 +1,33 @@
+.wrapper__header {
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.wrapper__header h3 {
+    color: white;
+    font-weight: 500;
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 8px;
+}
+
+.wrapper__header h3 span:nth-child(1){
+    color: #F02948;
+    font-size: 32px;
+    font-weight: 600;
+    position: relative;
+    top: 3px;
+    margin-right: 3px;
+}
+
+.wrapper__header > div {
+    gap: 3em;
+}
+
+.wrapper__header > div  a {
+    color: white;
+    font-family: 'Prompt', sans-serif;
+    cursor: pointer;
+}

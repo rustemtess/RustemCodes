@@ -1,0 +1,36 @@
+@import url(header.css);
+@import url(main.css);
+@import url(fonts.css);
+
+body {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    cursor: default;
+    background-color: #252525;
+    background-image: url(../img/b.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.row, .column {
+    display: flex;
+    flex-direction: row;
+}
+
+.column { flex-direction: column; }
+
+body > div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 1600px;
+    max-width: 100%;
+    padding: 1em 2em;
+}

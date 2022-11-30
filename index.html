@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/general.css">
+    <script src="./dist/Svg.js"></script>
+    <script src="./dist/main.js"></script>
+    <title>Rustem Codes</title>
+</head>
+<body>
+    <div>
+        <div class="wrapper">
+          <header class="wrapper__header row">
+            <h3><span>R</span>codes</h3>
+            <div class="row">
+              <!--<a>Me</a>
+              <a>About</a>
+              <a>Project</a>-->
+            </div>
+          </header>
+          <main class="wrapper__main column">
+            <div class="wrapper__main-welcome row">
+                <h1>Hello<br />I'm Rustem</h1>
+                <div>
+                  <h3>I am a front-end web developer from Kazakhstan with 2 years of personal experience.</h3>
+                  <button>More about me</button>
+                </div>
+            </div>
+            <div class="wrapper__main-networks row">
+              <script>
+                const size = 40
+                const color = 'white'
+
+                addElement('wrapper__main-networks', 
+                  `<a target="_blank" href="https://www.instagram.com/rustemtess/">${Svg.get('Instagram', size, color)}</a>`)
+                addElement('wrapper__main-networks', 
+                  `<a target="_blank" href="https://vk.com/rustemwhy">${Svg.get('VK', size, color)}</a>`)
+                addElement('wrapper__main-networks', 
+                  `<a target="_blank" href="https://t.me/rustemdev">${Svg.get('Telegram', size, color)}</a>`)
+                addElement('wrapper__main-networks', 
+                  `<a target="_blank" href="https://github.com/rustemtess">${Svg.get('Github', size, color)}</a>`)
+              </script>
+            </div>
+            <div class="wrapper__main-about column">
+              <h3><span style="color: #F02948;">A</span>bout me</h3>
+              <p>Hi, I'm Rustem Zhumabek, I'm 17 years old. I'm from Kazakhstan. 
+                I have been programming for 3 years. 
+                I have been doing web development for 2 years. 
+                I used to write in Java, but as I understand it, this is not mine. 
+                Now switched to Front-End development.</p>
+            </div>
+            <div class="wrapper__main-about column">
+              <h3><span style="color: #F02948;">M</span>y skills</h3>
+              <div class="wrapper__main-about-skills row">
+                <div class="skills">
+                  <h2>HTML</h2>
+                  <svg style="background-color: rgb(46, 46, 46); border-radius: 50%;" width="140" height="140">
+                    <circle class="skills-1" cx="70" cy="70" r="69"></circle>
+                  </svg>
+                </div>
+                <div class="skills">
+                  <h2>CSS</h2>
+                  <svg style="background-color: rgb(46, 46, 46); border-radius: 50%;" width="140" height="140">
+                    <circle class="skills-2" cx="70" cy="70" r="69"></circle>
+                  </svg>
+                </div>
+                <div class="skills">
+                  <h2>JS</h2>
+                  <svg style="background-color: rgb(46, 46, 46); border-radius: 50%;" width="140" height="140">
+                    <circle class="skills-3" cx="70" cy="70" r="69"></circle>
+                  </svg>
+                </div>
+                <div class="skills">
+                  <h2>React</h2>
+                  <svg style="background-color: rgb(46, 46, 46); border-radius: 50%;" width="140" height="140">
+                    <circle class="skills-4" cx="70" cy="70" r="69"></circle>
+                  </svg>
+                </div>
+                <div class="skills">
+                  <h2>TS</h2>
+                  <svg style="background-color: rgb(46, 46, 46); border-radius: 50%;" width="140" height="140">
+                    <circle class="skills-5" cx="70" cy="70" r="69"></circle>
+                  </svg>
+                </div>
+                <div class="skills">
+                  <h2>PHP</h2>
+                  <svg style="background-color: rgb(46, 46, 46); border-radius: 50%;" width="140" height="140">
+                    <circle class="skills-6" cx="70" cy="70" r="69"></circle>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="wrapper__main-about column">
+              <h3><span style="color: #F02948;">M</span>y projects</h3>
+              <div class="wrapper__main-about-skills">
+                <div class="wrapper__main-about-skills__block">
+                  <h2>Voice-Control Stan</h2>
+                  <p>I am personally an Iron Man fan. 
+                    And as we know, he has an assistant Jarvis. 
+                    This inspired me to create a similar voice bot. 
+                    You simply control your PC through a phone on the local network.</p>
+                  <a href="#">More</a>
+                </div>               
+              </div>
+
+            </div>
+          </main>
+          <script>
+            setProgress(70, 'skills-1');
+            setProgress(64, 'skills-2');
+            setProgress(60, 'skills-3');
+            setProgress(55, 'skills-4');
+            setProgress(20, 'skills-5');
+            setProgress(48, 'skills-6');
+          </script>
+          <footer>
+            
+          </footer>  
+        </div>
+    </div>
+</body>
+</html>
