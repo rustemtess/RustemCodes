@@ -67,6 +67,11 @@
     font-size: 30px;
     font-weight: 400;
     font-family: 'Prompt', sans-serif;
+    transition: .3s;
+}
+
+.wrapper__main-about > h3:hover {
+    transform: translateY(-10px);
 }
 
 .wrapper__main-about p {
@@ -91,6 +96,12 @@
     backdrop-filter: invert(5%);
     padding: 0.8em 2em 2em;
     max-width: 300px;
+    transition: .4s;
+    border: 2px solid rgb(46, 46, 46);
+}
+
+.wrapper__main-about-skills__block:hover {
+    border-color: #F02948;
 }
 
 .wrapper__main-about-skills__block p {
@@ -122,6 +133,12 @@
     fill: none;
     transform-origin: center;
     transform: rotate(-90deg);
+    transition: .4s;
+    cursor: pointer;
+}
+
+.skills:hover {
+    transform: scale(0.9);
 }
 
 .skills h2 {

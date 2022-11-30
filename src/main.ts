@@ -3,7 +3,12 @@ const addElement : any = (className: string,
         document.querySelector(`.${className}`).innerHTML += element
 }
 
-const setProgress : any = (percent: number, className: string) => {
+const viewBlock = (className: string) => {
+    const block = document.querySelector(`.${className}`)
+    block.scrollIntoView({block: "center", behavior: "smooth"});
+}
+
+const setProgress = (percent: number, className: string) => {
     const circle = document.querySelector(`.${className}`);
     // @ts-ignore
     const r = circle.r.baseVal.value;

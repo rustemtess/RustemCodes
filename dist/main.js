@@ -1,6 +1,10 @@
 const addElement = (className, element) => {
     document.querySelector(`.${className}`).innerHTML += element;
 };
+const viewBlock = (className) => {
+    const block = document.querySelector(`.${className}`);
+    block.scrollIntoView({ block: "center", behavior: "smooth" });
+};
 const setProgress = (percent, className) => {
     const circle = document.querySelector(`.${className}`);
     const r = circle.r.baseVal.value;
