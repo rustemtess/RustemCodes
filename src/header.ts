@@ -16,14 +16,14 @@ const items : Array<Object> = [
     }
 ]
 
-const header = () => {
+const header: any = () => {
     items.map( item => 
         // @ts-ignore
         addElement('items', `<a onclick="${item.func}">${item.title}</a>`, false)
     )
 }
 
-const showMenu = () => {
+const showMenu: any = () => {
     const menuBlock = getID('items').style.display
     if(menuBlock === "none") getID('items').style.display = "flex"
     else getID('items').style.display = "none"
