@@ -1,11 +1,19 @@
-const addElement : any = (className: string, 
-    element: string) => {
-        document.querySelector(`.${className}`).innerHTML += element
+const addElement : any = (classNameOrID: string, 
+    element: string, type: boolean = true) => {
+        if(type) document.querySelector(`.${classNameOrID}`).innerHTML += element
+        else document.getElementById(`${classNameOrID}`).innerHTML += element
 }
 
-const viewBlock = (className: string) => {
-    const block = document.querySelector(`.${className}`)
-    block.scrollIntoView({block: "center", behavior: "smooth"});
+const getID = (idName: string) => {
+    return document.getElementById(`${idName}`)
+}
+
+const view = (classNameOrUrl: string, type: boolean) => {
+    if(!type) document.location.href = classNameOrUrl
+    else {
+        const block = document.querySelector(`.${classNameOrUrl}`)
+        block.scrollIntoView({block: "center", behavior: "smooth"});
+    }
 }
 
 const setProgress = (percent: number, className: string) => {
@@ -22,3 +30,33 @@ const setProgress = (percent: number, className: string) => {
     // @ts-ignore
     circle.style.strokeDashoffset = offset;
 }
+
+const arrayMedia = [
+    {
+        mediaSize: "(min-width: 650px)",
+        func: function () {
+            getID('items').style.display = "flex"
+        } 
+    },
+    {
+        mediaSize: "(max-width: 650px)",
+        func: function() {
+            getID('items').style.display = "none"
+        }
+    }
+]
+
+const changeMedia = [
+    window.matchMedia(arrayMedia[0].mediaSize),
+    window.matchMedia(arrayMedia[1].mediaSize)
+]
+
+const handleChange = (e) => {
+    if(e.matches){
+        arrayMedia.map(media => {
+            if(e.currentTarget.media === media.mediaSize) media.func()
+        })
+    }
+}
+
+changeMedia.map(mediaListener => mediaListener.addListener(handleChange))
