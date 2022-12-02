@@ -89,8 +89,8 @@ const skills = [
     }
 ]
 
-const mainClass = "skill-"
-let i = 0;
+const mainClass: string = "skill-";
+let i: number = 0;
 const showSkills = () => {
     skills.map(skill => {
         const newClass: string = mainClass + i++

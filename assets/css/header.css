@@ -50,6 +50,7 @@
     }
     .wrapper__header > nav { 
         display: none;
+        z-index: 1;
         position: absolute;
         top: 6.3em;
         left: 0;

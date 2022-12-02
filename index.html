@@ -8,12 +8,20 @@
     <script src="./dist/Svg.js"></script>
     <script src="./dist/main.js"></script>
     <script src="./dist/header.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>Rustem Codes</title>
 </head>
 <body>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
     <div>
         <div class="wrapper">
-          <header class="wrapper__header row">
+          <header data-aos="fade-down" class="wrapper__header row">
             <h3><span>R</span>codes</h3>
             <nav class="row" id="items">
               <script>header()</script>
@@ -24,13 +32,13 @@
           </header>
           <main class="wrapper__main column">
             <div class="wrapper__main-welcome row">
-                <h1><span style="color: #F02948;">H</span>ello<br />I'm <span style="color: #F02948;">R</span>ustem</h1>
-                <div>
-                  <h3>I am a front-end web developer from Kazakhstan with 2 years of personal experience.</h3>
+                <h1 data-aos="flip-up"><span style="color: #F02948;">H</span>ello<br />I'm <span style="color: #F02948;">R</span>ustem</h1>
+                <div data-aos="flip-down">
+                  <h3 class="animate__animated animate__bounce">I am a front-end web developer from Kazakhstan with 2 years of personal experience.</h3>
                   <button onclick="view('about', true)">More about me</button>
                 </div>
             </div>
-            <div class="wrapper__main-networks row">
+            <div data-aos="fade-up" class="wrapper__main-networks row">
               <script>
                 const size = 40
                 const color = 'white'
@@ -45,7 +53,7 @@
                   `<a target="_blank" href="https://github.com/rustemtess">${Svg.get('Github', size, color)}</a>`, true)
               </script>
             </div>
-            <div class="wrapper__main-about column about">
+            <div data-aos="flip-left" class="wrapper__main-about column about">
               <h3><span style="color: #F02948;">A</span>bout me</h3>
               <p>Hi, I'm Rustem Zhumabek, I'm 17 years old. I'm from Kazakhstan. 
                 I have been programming for 3 years. 
@@ -57,13 +65,14 @@
                 if you are interested, you can follow this process.
               </p>
             </div>
-            <div class="wrapper__main-about column skill">
+            <div data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom" class="wrapper__main-about column skill">
               <h3><span style="color: #F02948;">M</span>y skills</h3>
               <div class="wrapper__main-about-skills row">
                 <script>showSkills()</script>
               </div>
             </div>
-            <div class="wrapper__main-about column project">
+            <div data-aos="zoom-in" class="wrapper__main-about column project">
               <h3><span style="color: #F02948;">M</span>y projects</h3>
               <div class="wrapper__main-about-skills row">
                 <div class="wrapper__main-about-skills__block">
