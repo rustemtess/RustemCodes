@@ -51,3 +51,43 @@ const handleChange = (e) => {
     }
 };
 changeMedia.map(mediaListener => mediaListener.addListener(handleChange));
+const skills = [
+    {
+        lauguage: "HTML",
+        progress: 70
+    },
+    {
+        lauguage: "CSS",
+        progress: 64
+    },
+    {
+        lauguage: "JS",
+        progress: 60
+    },
+    {
+        lauguage: "React",
+        progress: 55
+    },
+    {
+        lauguage: "TS",
+        progress: 20
+    },
+    {
+        lauguage: "PHP",
+        progress: 48
+    }
+];
+const mainClass = "skill-";
+let i = 0;
+const showSkills = () => {
+    skills.map(skill => {
+        const newClass = mainClass + i++;
+        addElement('wrapper__main-about-skills', `<div class="skills">
+        <h2>${skill.lauguage}</h2>
+        <svg style="background-color: rgb(46, 46, 46); border-radius: 50%;" width="140" height="140">
+          <circle class="${newClass}" cx="70" cy="70" r="69"></circle>
+        </svg>
+      </div>`);
+        setProgress(skill.progress, newClass);
+    });
+};
