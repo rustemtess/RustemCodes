@@ -91,3 +91,15 @@ const showSkills = () => {
         setProgress(skill.progress, newClass);
     });
 };
+const projects = [
+    
+];
+const projectList = () => {
+    projects.map(p => {
+        addElement('projects', `<div class="wrapper__main-about-skills__block">
+        <h2>${p.title}</h2>
+        <p>${p.description}</p>
+        <a href="${p.url}">More</a>
+      </div>`);
+    });
+};

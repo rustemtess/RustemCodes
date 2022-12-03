@@ -103,3 +103,26 @@ const showSkills = () => {
       setProgress(skill.progress, newClass)
     })
 }
+
+const projects = [
+    /*{
+        title: 'Voice-Control Stan',
+        description: "I am personally an Iron Man fan. And as we know, he has an assistant Jarvis. This inspired me to create a similar voice bot. You simply control your PC through a phone on the local network.",
+        url: '#'
+    }*/
+    {
+        title: 'Rustem Codes',
+        description: '',
+        url: '#'
+    }
+];
+
+const projectList: any = () => {
+    projects.map( p => {
+        addElement('projects', `<div class="wrapper__main-about-skills__block">
+        <h2>${p.title}</h2>
+        <p>${p.description}</p>
+        <a href="${p.url}">More</a>
+      </div>`)
+    } )
+}
